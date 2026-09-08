@@ -162,6 +162,81 @@ tr:last-child td{border-bottom:none;}
 .schip.na b{color:#94a3b8;}
 .closebtn{float:right;border:1px solid var(--line);background:#fff;border-radius:8px;padding:4px 12px;cursor:pointer;font-size:13px;}
 @media(max-width:720px){.scards{grid-template-columns:repeat(2,1fr)}}
+
+/* ===== 我的意大利国家队 ===== */
+.nt-open{border:1px solid var(--line);background:#fff;color:var(--ink);border-radius:9px;padding:8px 14px;
+  font-size:14px;cursor:pointer;font-weight:600;margin-left:10px;vertical-align:middle;}
+.nt-open:hover{background:#f1f5f9;}
+#ntModal{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(15,23,42,.5);
+  z-index:130;overflow-y:auto;padding:22px 12px 60px;}
+#ntModal.on{display:block;}
+.nt-box{max-width:1180px;margin:0 auto;background:var(--card);border-radius:14px;padding:18px;
+  box-shadow:0 12px 48px rgba(0,0,0,.28);}
+.nt-head{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:12px;}
+.nt-title{font-size:18px;font-weight:700;}
+.nt-actions button{border:1px solid var(--line);background:#fff;border-radius:8px;padding:7px 12px;
+  cursor:pointer;font-size:13px;margin-left:6px;}
+.nt-actions button:hover{background:#f1f5f9;}
+.nt-formbar{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px;align-items:center;}
+.nt-formbar .lb{font-size:12px;color:var(--sub);margin-right:2px;}
+.nt-fbtn{border:1px solid var(--line);background:#fff;border-radius:8px;padding:6px 11px;cursor:pointer;
+  font-size:13px;display:inline-flex;align-items:center;gap:6px;}
+.nt-fbtn.active{background:var(--accent);color:#fff;border-color:var(--accent);}
+.nt-fbtn .fit{font-size:11px;opacity:.85;}
+.nt-fbtn.dim{opacity:.55;}
+.nt-main{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:16px;}
+@media(max-width:880px){.nt-main{grid-template-columns:1fr;}}
+.nt-pitch{position:relative;width:100%;aspect-ratio:70/100;min-height:420px;border-radius:12px;
+  background:linear-gradient(180deg,#2e7d52 0%,#256b45 100%);border:3px solid #fff;
+  box-shadow:inset 0 0 0 2px rgba(255,255,255,.35);overflow:hidden;}
+.nt-pitch-bg{position:absolute;inset:0;pointer-events:none;}
+.nt-pitch-bg:before{content:'';position:absolute;left:50%;top:50%;width:27%;aspect-ratio:1;
+  transform:translate(-50%,-50%);border:2px solid rgba(255,255,255,.45);border-radius:50%;}
+.nt-pitch-bg:after{content:'';position:absolute;left:0;right:0;top:50%;height:2px;background:rgba(255,255,255,.42);}
+.nt-box-t{position:absolute;left:22%;right:22%;height:16%;border:2px solid rgba(255,255,255,.42);border-top:none;}
+.nt-box-t.top{top:0;} .nt-box-t.bot{bottom:0;border-top:2px solid rgba(255,255,255,.42);border-bottom:none;}
+.nt-slot{position:absolute;width:64px;height:64px;transform:translate(-50%,-50%);border-radius:50%;
+  background:rgba(255,255,255,.94);border:2px dashed #94a3b8;display:flex;flex-direction:column;
+  align-items:center;justify-content:center;cursor:pointer;text-align:center;transition:.15s;padding:2px;}
+.nt-slot:hover{border-color:var(--accent);background:#fff;}
+.nt-slot.open{border:3px solid var(--accent);box-shadow:0 0 0 4px rgba(37,99,235,.22);}
+.nt-slot.filled{border-style:solid;border-color:#16a34a;background:#f0fdf4;}
+.nt-slot.miss{border-style:solid;border-color:#f59e0b;background:#fffbeb;}
+.nt-plus{font-size:24px;line-height:1;color:#64748b;font-weight:700;}
+.nt-lb{font-size:10px;color:#475569;margin-top:2px;line-height:1.1;}
+.nt-av{width:30px;height:30px;border-radius:50%;object-fit:cover;background:#eef2f7;border:1px solid var(--line);}
+.nt-nm{font-size:10px;font-weight:600;line-height:1.15;margin-top:2px;max-width:60px;overflow:hidden;
+  text-overflow:ellipsis;white-space:nowrap;}
+.nt-sc{font-size:10px;color:var(--accent);font-weight:700;}
+.nt-del{position:absolute;top:-6px;right:-6px;width:20px;height:20px;border-radius:50%;background:#ef4444;
+  color:#fff;font-size:12px;line-height:20px;text-align:center;border:2px solid #fff;cursor:pointer;}
+.nt-side{display:flex;flex-direction:column;gap:8px;min-width:0;}
+.nt-modetabs{display:flex;gap:6px;}
+.nt-modetabs button{flex:1;border:1px solid var(--line);background:#fff;border-radius:8px;padding:7px 8px;
+  cursor:pointer;font-size:13px;}
+.nt-modetabs button.active{background:var(--accent);color:#fff;border-color:var(--accent);}
+.nt-hint{font-size:12px;color:var(--sub);background:#f8fafc;border:1px solid var(--line);border-radius:8px;padding:7px 10px;}
+.nt-toolbar{display:flex;gap:8px;align-items:center;flex-wrap:wrap;}
+.nt-toolbar input[type=text]{flex:1;min-width:160px;padding:8px 10px;border:1px solid var(--line);
+  border-radius:8px;font-size:14px;background:#fff;}
+.nt-chk{font-size:12px;color:var(--sub);display:inline-flex;align-items:center;gap:4px;cursor:pointer;}
+.nt-list{border:1px solid var(--line);border-radius:10px;max-height:430px;overflow-y:auto;}
+.nt-row{display:flex;align-items:center;gap:8px;padding:7px 10px;border-bottom:1px solid var(--line);
+  cursor:pointer;font-size:13px;}
+.nt-row:last-child{border-bottom:none;}
+.nt-row:hover{background:#f3f6fb;}
+.nt-row.inpool{background:#eff6ff;}
+.nt-row.picked{background:#ecfdf5;}
+.nt-row .g{flex:1;min-width:0;}
+.nt-row .g b{font-size:13px;}
+.nt-row .g span{display:block;font-size:11px;color:var(--sub);overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+.nt-row .sc{font-weight:700;color:var(--accent);font-size:13px;min-width:34px;text-align:right;}
+.nt-tag{font-size:11px;padding:1px 6px;border-radius:999px;background:#eef2ff;color:#334155;}
+.nt-tag.gk{background:#e0f2fe}.nt-tag.df{background:#dcfce7}.nt-tag.mf{background:#fef9c3}.nt-tag.fw{background:#fde2e2}
+.nt-foot{margin-top:12px;display:flex;gap:10px;flex-wrap:wrap;align-items:center;font-size:13px;color:var(--sub);}
+.nt-chip{background:#f8fafc;border:1px solid var(--line);border-radius:8px;padding:5px 10px;}
+.nt-chip b{color:var(--ink);}
+.nt-warn{color:#b45309;}
 </style></head><body><div class="wrap">
 <h1>意大利籍 · 五大联赛球员动态评分系统</h1>
 <div class="meta">赛季 2025-26 · 名册 233 人 · 点击任意球员查看详细数据（已录入 <b id="ndetail">233</b> 人）</div>
@@ -224,6 +299,40 @@ tr:last-child td{border-bottom:none;}
   </div>
 </div>
 </div>
+
+<div id="ntModal">
+  <div class="nt-box">
+    <div class="nt-head">
+      <div class="nt-title">⚽ 我的意大利国家队</div>
+      <div class="nt-actions">
+        <button onclick="ntFillBest()">一键最强阵</button>
+        <button onclick="ntCopySquad()">复制名单</button>
+        <button onclick="ntClear()">清空</button>
+        <button onclick="ntClose()">关闭 ✕</button>
+      </div>
+    </div>
+    <div class="nt-formbar" id="ntFormBar"></div>
+    <div class="nt-main">
+      <div>
+        <div class="nt-pitch" id="ntPitch"></div>
+      </div>
+      <div class="nt-side">
+        <div class="nt-modetabs">
+          <button id="ntModeA" onclick="ntSetMode(false)">手动选人</button>
+          <button id="ntModeB" onclick="ntSetMode(true)">先选球员 · 自动排阵</button>
+        </div>
+        <div class="nt-hint" id="ntHint"></div>
+        <div class="nt-toolbar">
+          <input type="text" id="ntSearch" placeholder="🔍 搜索：中文译名 / 原名 / 俱乐部" oninput="ntRenderList()">
+          <label class="nt-chk"><input type="checkbox" id="ntOnlyRated" checked onchange="ntRenderList()"> 只看有评分</label>
+        </div>
+        <div class="nt-list" id="ntList"></div>
+      </div>
+    </div>
+    <div class="nt-foot" id="ntFoot"></div>
+  </div>
+</div>
+
 <script>/*!
  * Chart.js v4.4.1
  * https://www.chartjs.org
@@ -872,5 +981,308 @@ function initControls(){
 }
 initControls();render();
 </script>
-<footer style="margin-top:34px;padding:16px;text-align:center;color:#8b95a5;font-size:12px;border-top:1px solid rgba(255,255,255,.08);line-height:1.6">数据更新于 2026-09-08 22:16 · 名册 233 人 · 含动态评分 210 人 · 每日 08:00 自动抓取更新（无需登录）</footer>
+<script>
+/* ================= 我的意大利国家队 ================= */
+/* 阵型定义: k=位置大类(GK/DF/MF/FW), x/y 为球场百分比坐标(0,0=左上) */
+const NT_FORMS = {
+  '433':  {name:'4-3-3',   slots:[
+    {k:'GK',lb:'门将',x:50,y:93},{k:'DF',lb:'左后卫',x:13,y:74},{k:'DF',lb:'中后卫',x:38,y:79},
+    {k:'DF',lb:'中后卫',x:62,y:79},{k:'DF',lb:'右后卫',x:87,y:74},{k:'MF',lb:'中场',x:22,y:53},
+    {k:'MF',lb:'中场',x:50,y:60},{k:'MF',lb:'中场',x:78,y:53},{k:'FW',lb:'左边锋',x:16,y:24},
+    {k:'FW',lb:'中锋',x:50,y:15},{k:'FW',lb:'右边锋',x:84,y:24}]},
+  '4231': {name:'4-2-3-1', slots:[
+    {k:'GK',lb:'门将',x:50,y:93},{k:'DF',lb:'左后卫',x:13,y:76},{k:'DF',lb:'中后卫',x:38,y:81},
+    {k:'DF',lb:'中后卫',x:62,y:81},{k:'DF',lb:'右后卫',x:87,y:76},{k:'MF',lb:'后腰',x:34,y:63},
+    {k:'MF',lb:'后腰',x:66,y:63},{k:'MF',lb:'左前腰',x:18,y:40},{k:'MF',lb:'前腰',x:50,y:36},
+    {k:'MF',lb:'右前腰',x:82,y:40},{k:'FW',lb:'中锋',x:50,y:14}]},
+  '442':  {name:'4-4-2',   slots:[
+    {k:'GK',lb:'门将',x:50,y:93},{k:'DF',lb:'左后卫',x:13,y:74},{k:'DF',lb:'中后卫',x:38,y:79},
+    {k:'DF',lb:'中后卫',x:62,y:79},{k:'DF',lb:'右后卫',x:87,y:74},{k:'MF',lb:'左前卫',x:14,y:50},
+    {k:'MF',lb:'中场',x:38,y:57},{k:'MF',lb:'中场',x:62,y:57},{k:'MF',lb:'右前卫',x:86,y:50},
+    {k:'FW',lb:'前锋',x:38,y:17},{k:'FW',lb:'前锋',x:62,y:17}]},
+  '4312': {name:'4-3-1-2', slots:[
+    {k:'GK',lb:'门将',x:50,y:93},{k:'DF',lb:'左后卫',x:13,y:76},{k:'DF',lb:'中后卫',x:38,y:81},
+    {k:'DF',lb:'中后卫',x:62,y:81},{k:'DF',lb:'右后卫',x:87,y:76},{k:'MF',lb:'后腰',x:50,y:64},
+    {k:'MF',lb:'中场',x:26,y:48},{k:'MF',lb:'中场',x:74,y:48},{k:'MF',lb:'前腰',x:50,y:31},
+    {k:'FW',lb:'前锋',x:34,y:14},{k:'FW',lb:'前锋',x:66,y:14}]},
+  '352':  {name:'3-5-2',   slots:[
+    {k:'GK',lb:'门将',x:50,y:93},{k:'DF',lb:'中后卫',x:24,y:78},{k:'DF',lb:'中后卫',x:50,y:81},
+    {k:'DF',lb:'中后卫',x:76,y:78},{k:'MF',lb:'左翼卫',x:10,y:52},{k:'MF',lb:'中场',x:32,y:59},
+    {k:'MF',lb:'中场',x:50,y:63},{k:'MF',lb:'中场',x:68,y:59},{k:'MF',lb:'右翼卫',x:90,y:52},
+    {k:'FW',lb:'前锋',x:38,y:17},{k:'FW',lb:'前锋',x:62,y:17}]},
+  '343':  {name:'3-4-3',   slots:[
+    {k:'GK',lb:'门将',x:50,y:93},{k:'DF',lb:'中后卫',x:24,y:78},{k:'DF',lb:'中后卫',x:50,y:81},
+    {k:'DF',lb:'中后卫',x:76,y:78},{k:'MF',lb:'左前卫',x:14,y:55},{k:'MF',lb:'中场',x:38,y:60},
+    {k:'MF',lb:'中场',x:62,y:60},{k:'MF',lb:'右前卫',x:86,y:55},{k:'FW',lb:'左边锋',x:18,y:24},
+    {k:'FW',lb:'中锋',x:50,y:15},{k:'FW',lb:'右边锋',x:82,y:24}]},
+  '532':  {name:'5-3-2',   slots:[
+    {k:'GK',lb:'门将',x:50,y:93},{k:'DF',lb:'左后卫',x:9,y:66},{k:'DF',lb:'中后卫',x:30,y:79},
+    {k:'DF',lb:'中后卫',x:50,y:81},{k:'DF',lb:'中后卫',x:70,y:79},{k:'DF',lb:'右后卫',x:91,y:66},
+    {k:'MF',lb:'中场',x:25,y:52},{k:'MF',lb:'中场',x:50,y:57},{k:'MF',lb:'中场',x:75,y:52},
+    {k:'FW',lb:'前锋',x:38,y:17},{k:'FW',lb:'前锋',x:62,y:17}]},
+  '4141': {name:'4-1-4-1', slots:[
+    {k:'GK',lb:'门将',x:50,y:93},{k:'DF',lb:'左后卫',x:13,y:76},{k:'DF',lb:'中后卫',x:38,y:81},
+    {k:'DF',lb:'中后卫',x:62,y:81},{k:'DF',lb:'右后卫',x:87,y:76},{k:'MF',lb:'后腰',x:50,y:66},
+    {k:'MF',lb:'左前卫',x:14,y:46},{k:'MF',lb:'中场',x:38,y:52},{k:'MF',lb:'中场',x:62,y:52},
+    {k:'MF',lb:'右前卫',x:86,y:46},{k:'FW',lb:'中锋',x:50,y:14}]}
+};
+/* 阵型展示顺序。必须显式给出: Object.keys() 对纯数字型键('433'/'4231')会按数值升序排,
+   实际产出 343→352→433→442→532→4141… 这种反直觉顺序。 */
+const NT_ORDER = ['433','4231','442','4312','352','343','532','4141'];
+/* 坑位 -> 推荐优先级(用户 2026-09-08 指定): 门将只推门将; 后卫->中场->前锋;
+   中场->前锋->后卫; 前锋->中场->后卫。不分左右中。 */
+const NT_PREF = {'门将':['门将'],'后卫':['后卫','中场','前锋'],
+                 '中场':['中场','前锋','后卫'],'前锋':['前锋','中场','后卫']};
+const NT_GOFK = {GK:'门将',DF:'后卫',MF:'中场',FW:'前锋'};
+const NT_GCODE = {'门将':'gk','后卫':'df','中场':'mf','前锋':'fw'};
+const NT_KEY = 'italy_nt_squad_v1';
+
+let NT = {form:'433', slots:{}, poolMode:false, pool:new Set(), openSlot:null};
+
+function ntSave(){ try{ localStorage.setItem(NT_KEY, JSON.stringify(
+  {form:NT.form, slots:NT.slots, poolMode:NT.poolMode, pool:[...NT.pool]})); }catch(e){} }
+function ntLoad(){ try{ const s=JSON.parse(localStorage.getItem(NT_KEY)||'null');
+  if(s){ NT.form=s.form||'433'; NT.slots=s.slots||{}; NT.poolMode=!!s.poolMode; NT.pool=new Set(s.pool||[]); } }catch(e){} }
+
+function ntOpen(){ document.getElementById('ntModal').classList.add('on'); ntRenderAll(); }
+function ntClose(){ document.getElementById('ntModal').classList.remove('on'); }
+function ntSetMode(isPool){
+  NT.poolMode=isPool; NT.openSlot=null; NT.slots={}; ntSave(); ntRenderAll();
+}
+function ntClear(){ NT.slots={}; NT.pool=new Set(); NT.openSlot=null; ntSave(); ntRenderAll(); }
+function ntSetForm(k){
+  NT.form=k; NT.openSlot=null;
+  if(NT.poolMode) NT.slots={};          /* 自动模式换阵型=重排, 不保留旧坑位 */
+  else NT.slots={};                     /* 手动模式也清空: 不同阵型坑位语义不同 */
+  ntSave(); ntRenderAll();
+}
+function ntPByName(n){ return players.find(p=>p.name===n); }
+function ntScore(p){ return p && p.env_score!=null ? p.env_score : null; }
+
+/* 某坑位的推荐序列: 先按位置偏好分组, 组内按环境分从高到低。
+   不在该坑位偏好序列里的位置(如"门将位"遇到中场)直接排除 —— 用户明确要求
+   门将位只推门将; 同理后卫位不会推荐门将。 */
+function ntCands(slotK, exclude){
+  const pref = NT_PREF[NT_GOFK[slotK]] || [];
+  const only = document.getElementById('ntOnlyRated') && document.getElementById('ntOnlyRated').checked;
+  return players.map(p=>{
+      let gi = pref.indexOf(p.group); if(gi<0) gi=99;
+      return {p, gi, s: ntScore(p)};
+    })
+    .filter(o=> o.gi < 99)
+    .filter(o=> o.s!=null || !only)
+    .filter(o=> !exclude || !exclude.has(o.p.name))
+    .sort((a,b)=> a.gi-b.gi || (b.s==null?-999:b.s)-(a.s==null?-999:a.s))
+    .map(o=>o.p);
+}
+
+/* 自动排阵。返回 {assign:{slotIdx:name}, pen, filled}
+   —— 两遍法(2026-09-08 修正):
+   第一遍只做「完全对口」: 后卫坑只吃后卫、中场坑只吃中场……
+     同组内坑位按"靠中路优先"(|x-50| 小)排, 高分者站中间(最好的中卫居中、最好的前锋打中锋)。
+   第二遍才允许错位: 对剩下的空位, 每轮挑「可填人选最少」的那个坑位先填(最受限优先),
+     在剩余池里取 (偏好下标最小, 环境分最高) 者, 并累计错位罚分。
+   为什么不用"池内人数最少的分组优先"的朴素贪心: 实测会翻车 —— 池里 4 后卫/3 中场/2 前锋
+     打 4-3-3 时, 它会先把 3 个前锋坑填满(前锋最少→优先), 于是中场被拉去打前锋,
+     反过来后防少人, 罚分 3; 两遍法同场景罚分 0(4 后卫各就各位, 空 1 个前锋位)。 */
+function ntArrange(poolNames, formKey){
+  const slots = NT_FORMS[formKey].slots.map((s,i)=>({i, k:s.k, g:NT_GOFK[s.k], x:s.x}));
+  const pool = poolNames.map(ntPByName).filter(Boolean);
+  const used = new Set(), assign = {};
+  let pen = 0;
+  const byScore = (a,b)=> (ntScore(b)==null?-999:ntScore(b)) - (ntScore(a)==null?-999:ntScore(a));
+
+  for(const g of ['门将','后卫','中场','前锋']){
+    const gs = slots.filter(s=>s.g===g).slice()
+                    .sort((a,b)=> Math.abs(a.x-50)-Math.abs(b.x-50));
+    const ps = pool.filter(p=>p.group===g && !used.has(p.name)).sort(byScore);
+    for(let j=0;j<Math.min(gs.length, ps.length);j++){
+      assign[gs[j].i] = ps[j].name; used.add(ps[j].name);
+    }
+  }
+  const viab = s => pool.filter(p=> !used.has(p.name)
+                    && (NT_PREF[s.g]||[]).indexOf(p.group)>=0).length;
+  let empties = slots.filter(s=>!assign[s.i]);
+  while(empties.length){
+    empties.sort((a,b)=> viab(a)-viab(b));
+    const s = empties[0];
+    const pref = NT_PREF[s.g]||[];
+    let best=null, bgi=99, bsc=-1e9;
+    for(const p of pool){
+      if(used.has(p.name)) continue;
+      let gi = pref.indexOf(p.group); if(gi>=99||gi<0) continue;
+      const sc = ntScore(p), sv = sc==null?-999:sc;
+      if(gi<bgi || (gi===bgi && sv>bsc)){ best=p; bgi=gi; bsc=sv; }
+    }
+    if(!best) break;
+    assign[s.i]=best.name; used.add(best.name); pen+=bgi;
+    empties = slots.filter(x=>!assign[x.i]);
+  }
+  return {assign, pen, filled:Object.keys(assign).length};
+}
+
+function ntApplyPool(){
+  if(!NT.poolMode) return;
+  const r = ntArrange([...NT.pool], NT.form);
+  NT.slots = {}; Object.keys(r.assign).forEach(i=>{ NT.slots[i]=r.assign[i]; });
+  NT.pen = r.pen; NT.filled = r.filled;
+}
+
+function ntFillBest(){
+  const form = NT_FORMS[NT.form];
+  const used = new Set();
+  NT.slots = {};
+  form.slots.forEach((s,i)=>{
+    const c = ntCands(s.k, used).filter(p=> (NT_PREF[NT_GOFK[s.k]].indexOf(p.group))===0);
+    const pick = c[0] || ntCands(s.k, used)[0];
+    if(pick){ NT.slots[i]=pick.name; used.add(pick.name); }
+  });
+  NT.openSlot=null; ntSave(); ntRenderAll();
+}
+
+function ntSlotClick(i){
+  if(NT.poolMode) return;               /* 自动模式下坑位只读 */
+  const nm = NT.slots[i];
+  NT.openSlot = (NT.openSlot===i) ? null : i;
+  ntRenderAll();
+}
+function ntDelSlot(i, ev){
+  if(ev) ev.stopPropagation();
+  delete NT.slots[i]; ntSave(); ntRenderAll();
+}
+function ntPick(name){
+  if(NT.poolMode){                       /* 勾选/取消 预选池 */
+    if(NT.pool.has(name)) NT.pool.delete(name); else NT.pool.add(name);
+    ntApplyPool(); ntSave(); ntRenderAll(); return;
+  }
+  if(NT.openSlot==null) return;
+  /* 同一人不能占两个坑位 */
+  Object.keys(NT.slots).forEach(k=>{ if(NT.slots[k]===name) delete NT.slots[k]; });
+  NT.slots[NT.openSlot]=name;
+  /* 自动跳到下一个空坑位, 连续选人更顺手 */
+  const total = NT_FORMS[NT.form].slots.length;
+  let nx=null;
+  for(let j=1;j<=total;j++){ const k=(NT.openSlot+j)%total; if(!NT.slots[k]){ nx=k; break; } }
+  NT.openSlot = nx;
+  ntSave(); ntRenderAll();
+}
+
+function ntRenderPitch(){
+  const form = NT_FORMS[NT.form];
+  const el = document.getElementById('ntPitch');
+  const html = form.slots.map((s,i)=>{
+    const nm = NT.slots[i], p = nm? ntPByName(nm) : null;
+    const cls = 'nt-slot' + (NT.openSlot===i?' open':'') + (p?' filled':(nm?' miss':''));
+    const body = p
+      ? '<img class="nt-av" src="'+(p.img||DEFAULT_AVATAR)+'" alt="">'
+        + '<div class="nt-nm">'+p.name_zh+'</div>'
+        + '<div class="nt-sc">'+(ntScore(p)!=null?ntScore(p):'—')+'</div>'
+        + '<div class="nt-del" onclick="ntDelSlot('+i+',event)">✕</div>'
+      : '<div class="nt-plus">+</div><div class="nt-lb">'+s.lb+'</div>';
+    return '<div class="'+cls+'" style="left:'+s.x+'%;top:'+s.y+'%" onclick="ntSlotClick('+i+')" '
+         + 'title="'+(p?p.name_zh+' · '+s.lb:s.lb+'（点击选人）')+'">'+body+'</div>';
+  }).join('');
+  el.innerHTML = '<div class="nt-pitch-bg"></div><div class="nt-box-t top"></div>'
+               + '<div class="nt-box-t bot"></div>' + html;
+}
+
+function ntRenderFormBar(){
+  const bar = document.getElementById('ntFormBar');
+  let h = '<span class="lb">阵型：</span>';
+  NT_ORDER.forEach(k=>{
+    let fit='';
+    if(NT.poolMode && NT.pool.size){
+      const r = ntArrange([...NT.pool], k);
+      fit = '<span class="fit">'+r.filled+'/11'+(r.pen?(' · 错位'+r.pen):'')+'</span>';
+    }
+    const cls = 'nt-fbtn' + (k===NT.form?' active':'') +
+                (NT.poolMode && NT.pool.size && fit.indexOf('11/11')<0 ? ' dim':'');
+    h += '<button class="'+cls+'" onclick="ntSetForm(\''+k+'\')">'+NT_FORMS[k].name+fit+'</button>';
+  });
+  bar.innerHTML = h;
+}
+
+function ntRenderList(){
+  const el = document.getElementById('ntList');
+  const q = (document.getElementById('ntSearch').value||'').trim().toLowerCase();
+  let list;
+  if(NT.poolMode){
+    list = players.slice();
+  }else if(NT.openSlot!=null){
+    const used = new Set(Object.values(NT.slots));
+    list = ntCands(NT_FORMS[NT.form].slots[NT.openSlot].k, used);
+  }else{
+    list = players.slice().sort((a,b)=> (ntScore(b)==null?-999:ntScore(b))-(ntScore(a)==null?-999:ntScore(a)));
+  }
+  if(q){
+    list = list.filter(p=> (p.name_zh||'').toLowerCase().includes(q)
+                        || (p.name||'').toLowerCase().includes(q)
+                        || (p.club_zh||'').toLowerCase().includes(q)
+                        || (p.club||'').toLowerCase().includes(q));
+  }
+  const picked = new Set(Object.values(NT.slots));
+  const head = NT.poolMode
+    ? '<div class="nt-hint">已选 <b>'+NT.pool.size+'</b> 人 · 点球员加入/移出预选池，系统自动排成当前阵型</div>'
+    : (NT.openSlot!=null
+        ? '<div class="nt-hint">正在为 <b>'+NT_FORMS[NT.form].slots[NT.openSlot].lb+'</b> 选人 · '
+          + '推荐顺序：'+NT_PREF[NT_GOFK[NT_FORMS[NT.form].slots[NT.openSlot].k]].join(' → ')
+          + '（同位置按环境分从高到低）</div>'
+        : '<div class="nt-hint">点击球场上任意 <b>+</b> 号坑位开始选人</div>');
+  document.getElementById('ntHint').innerHTML = head;
+  el.innerHTML = list.slice(0,300).map(p=>{
+    const cls = 'nt-row' + (NT.pool.has(p.name)?' inpool':'') + (picked.has(p.name)?' picked':'');
+    const sc = ntScore(p);
+    return '<div class="'+cls+'" onclick="ntPick(\''+p.name.replace(/'/g,"\\'")+'\')">'
+      + '<img class="nt-av" src="'+(p.img||DEFAULT_AVATAR)+'" alt="">'
+      + '<div class="g"><b>'+p.name_zh+'</b><span>'+p.club_zh+' · '+p.league+'</span></div>'
+      + '<span class="nt-tag '+(NT_GCODE[p.group]||'')+'">'+p.group+'</span>'
+      + '<div class="sc">'+(sc!=null?sc:'—')+'</div></div>';
+  }).join('') || '<div class="nt-hint">没有匹配的球员</div>';
+}
+
+function ntRenderFoot(){
+  const form = NT_FORMS[NT.form];
+  const arr = Object.keys(NT.slots).map(i=>ntPByName(NT.slots[i])).filter(Boolean);
+  const sc = arr.map(ntScore).filter(v=>v!=null);
+  const avg = sc.length ? (sc.reduce((a,b)=>a+b,0)/sc.length).toFixed(2) : '—';
+  const cnt = {门将:0,后卫:0,中场:0,前锋:0}; arr.forEach(p=>cnt[p.group]++);
+  let pen = 0;
+  Object.keys(NT.slots).forEach(i=>{
+    const p = ntPByName(NT.slots[i]); if(!p) return;
+    const gi = (NT_PREF[NT_GOFK[form.slots[i].k]]||[]).indexOf(p.group);
+    if(gi>0) pen += gi;
+  });
+  const empty = form.slots.length - Object.keys(NT.slots).length;
+  document.getElementById('ntFoot').innerHTML =
+      '<span class="nt-chip">阵型 <b>'+form.name+'</b></span>'
+    + '<span class="nt-chip">已选 <b>'+arr.length+'/11</b></span>'
+    + '<span class="nt-chip">平均环境分 <b>'+avg+'</b></span>'
+    + '<span class="nt-chip">门将'+cnt.门将+' · 后卫'+cnt.后卫+' · 中场'+cnt.中场+' · 前锋'+cnt.前锋+'</span>'
+    + (pen? '<span class="nt-chip nt-warn">位置错位罚分 <b>'+pen+'</b></span>':'')
+    + (empty? '<span class="nt-chip nt-warn">还缺 <b>'+empty+'</b> 人</span>':'');
+}
+
+function ntCopySquad(){
+  const form = NT_FORMS[NT.form];
+  const lines = form.slots.map((s,i)=>{
+    const p = ntPByName(NT.slots[i]);
+    return (i+1)+'. '+s.lb+'：'+(p? (p.name_zh+'（'+p.club_zh+' · 环境分 '+(ntScore(p)!=null?ntScore(p):'—')+'）') : '（空缺）');
+  });
+  const txt = '我的意大利国家队 · '+form.name+'\n'+lines.join('\n');
+  try{ navigator.clipboard.writeText(txt); alert('名单已复制到剪贴板'); }
+  catch(e){ console.log(txt); alert('复制失败，名单已输出到控制台'); }
+}
+
+function ntRenderAll(){
+  if(NT.poolMode) ntApplyPool();
+  ntRenderFormBar(); ntRenderPitch(); ntRenderList(); ntRenderFoot();
+  document.getElementById('ntModeA').classList.toggle('active', !NT.poolMode);
+  document.getElementById('ntModeB').classList.toggle('active', NT.poolMode);
+}
+ntLoad();
+(function(){ const b=document.createElement('button'); b.className='nt-open';
+  b.textContent='⚽ 我的意大利国家队'; b.onclick=ntOpen;
+  document.querySelector('h1').appendChild(b); })();
+</script>
+<footer style="margin-top:34px;padding:16px;text-align:center;color:#8b95a5;font-size:12px;border-top:1px solid rgba(255,255,255,.08);line-height:1.6">数据更新于 2026-09-08 22:47 · 名册 233 人 · 含动态评分 210 人 · 每日 08:00 自动抓取更新（无需登录）</footer>
 </body></html>
